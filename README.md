@@ -1,8 +1,5 @@
 # react-native-responsive-view-port
 
-
-# react-native-button-wrapper
-
 This package helps to create responsive application for either complete landscape or portrait applications.
 
 ![](button-wrapper.gif)
@@ -50,10 +47,10 @@ function TextWrapper() {
           justifyContent: 'center',
           fontSize: 25 * vh,
         }}
-				placeholder="Enter Text..."
-				keyboardType="email-address"
-				underlineColorAndroid='transparent'
-       />
+	placeholder="Enter Text..."
+	keyboardType="email-address"
+	underlineColorAndroid='transparent'
+      />
      </View>
    );
  }
