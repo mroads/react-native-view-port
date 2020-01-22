@@ -1,8 +1,11 @@
 # react-native-responsive-view-port
 
-This package helps to create responsive application for either complete landscape or portrait applications.
+This package helps to create responsive application for either fully landscape or portrait applications.
 
-![](button-wrapper.gif)
+![](./assets/7-inch.png)
+![](./assets/9-inch.png)
+![](./assets/10-inch.png)
+![](./assets/12-inch.png)
 
 # Setup
 ### Installation
