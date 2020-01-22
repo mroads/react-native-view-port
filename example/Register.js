@@ -32,37 +32,37 @@ export default class Register extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.imageContainer} ><Image style={styles.imageStyle} source={{uri: imageUrl }}/></View>
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputIcon} source={{uri: userImage }}/>
-          <TextInput style={styles.inputs}
-              placeholder="Full name"
-              keyboardType="email-address"
-              underlineColorAndroid='transparent'
-              onChangeText={(fullName) => this.setState({fullName})}/>
-        </View>
+        <View style={styles.viewCard}>
+					<View style={styles.imageContainer} ><Image style={styles.imageStyle} source={{uri: imageUrl }}/></View>
+					<View style={styles.inputContainer}>
+					<Image style={styles.inputIcon} source={{uri: userImage }}/>
+					<TextInput style={styles.inputs}
+							placeholder="Full name"
+							keyboardType="email-address"
+							underlineColorAndroid='transparent'
+							onChangeText={(fullName) => this.setState({fullName})}/>
+					</View>
+					<View style={styles.inputContainer}>
+					<Image style={styles.inputIcon} source={{uri: emailImage }}/>
+					<TextInput style={styles.inputs}
+							placeholder="Email"
+							keyboardType="email-address"
+							underlineColorAndroid='transparent'
+							onChangeText={(email) => this.setState({email})}/>
+					</View>
+					<View style={styles.inputContainer}>
+					<Image style={styles.inputIcon} source={{uri: passwordImage }}/>
+					<TextInput style={styles.inputs}
+							placeholder="Password"
+							secureTextEntry={true}
+							underlineColorAndroid='transparent'
+							onChangeText={(password) => this.setState({password})}/>
+					</View>
 
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputIcon} source={{uri: emailImage }}/>
-          <TextInput style={styles.inputs}
-              placeholder="Email"
-              keyboardType="email-address"
-              underlineColorAndroid='transparent'
-              onChangeText={(email) => this.setState({email})}/>
+					<TouchableHighlight style={[styles.buttonContainer, styles.signupButton]}>
+					<Text style={styles.signUpText}>Sign up</Text>
+					</TouchableHighlight>
         </View>
-        
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputIcon} source={{uri: passwordImage }}/>
-          <TextInput style={styles.inputs}
-              placeholder="Password"
-              secureTextEntry={true}
-              underlineColorAndroid='transparent'
-              onChangeText={(password) => this.setState({password})}/>
-        </View>
-
-        <TouchableHighlight style={[styles.buttonContainer, styles.signupButton]}>
-          <Text style={styles.signUpText}>Sign up</Text>
-        </TouchableHighlight>
       </View>
     );
   }
@@ -75,6 +75,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#545454',
   },
+	viewCard: {
+		backgroundColor: '#d3d3d3',
+		justifyContent: 'center',
+    alignItems: 'center',
+		paddingVertical: 10 * vh,
+		paddingHorizontal: 15 * vw,
+		borderRadius: 8,
+		shadowOffset:{  width: 10 * vw,  height: 10 * vw },
+		shadowColor: 'black',
+		shadowOpacity: 1.0,
+		elevation: 10,
+		width: 500 * vw,
+	},
   inputContainer: {
       borderBottomColor: '#F5FCFF',
       backgroundColor: '#FFFFFF',
@@ -92,23 +105,23 @@ const styles = StyleSheet.create({
       borderBottomColor: '#FFFFFF',
       flex:1,
       justifyContent: 'center',
+      fontSize: 25 * vh,
   },
   inputIcon:{
     width: 45 * vw,
-    height: 45 * vh,
+    height: 45 * vw,
     marginLeft: 10 * vw,
     justifyContent: 'center',
   },
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#545454',
-    marginBottom: 10 * vh,
+    backgroundColor: '#d3d3d3',
+    marginVertical: 10 * vh,
   },
   imageStyle: {
     width: 130 * vw,
-    height: 130 * vh,
-    marginLeft: 15 * vw,
+    height: 130 * vw,
     justifyContent: 'center',
     borderRadius: 8,
   },
@@ -126,5 +139,6 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     color: 'white',
+    fontSize: 25 * vh,
   }
 });
