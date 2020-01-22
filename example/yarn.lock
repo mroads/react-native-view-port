@@ -1457,13 +1457,6 @@ babel-preset-jest@^24.9.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.9.0"
 
-babel-runtime@^5.5.6:
-  version "5.8.38"
-  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-5.8.38.tgz#1c0b02eb63312f5f087ff20450827b425c9d4c19"
-  integrity sha1-HAsC62MxL18If/IEUIJ7QlydTBk=
-  dependencies:
-    core-js "^1.0.0"
-
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -3705,13 +3698,6 @@ jetifier@^1.6.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-utils@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/js-utils/-/js-utils-1.0.0.tgz#14b449ac6999227be8d9308dab2b5dc842d141b4"
-  integrity sha1-FLRJrGmZInvo2TCNqytdyELRQbQ=
-  dependencies:
-    babel-runtime "^5.5.6"
-
 js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
@@ -4406,6 +4392,11 @@ morgan@^1.9.0:
     on-finished "~2.3.0"
     on-headers "~1.0.1"
 
+mroads-js-utils@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/mroads-js-utils/-/mroads-js-utils-1.0.2.tgz#4947e5e1375c25871db9e06e4cdb638c96f94af9"
+  integrity sha512-whuiTEDXRoYs7pomfYG0OaiRlfw01AqhZKXaohhZ7U69Rv22LCPNV4DF4QBQ6m3AUR/to+Q3pVodH1rdYKiRMA==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5068,6 +5059,13 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+
+react-native-responsive-view-port@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-responsive-view-port/-/react-native-responsive-view-port-1.0.6.tgz#b0b2d3c803e8312d22a8d1a5bf08c29569f5b492"
+  integrity sha512-mH6m4QG5YVZ8FLDvF470VpMZK/GR6ndZDDizj9AXXaRRlYUlTknr6RZ++U/YNmzZuM9GbiHfhVVWmtazEdNUNg==
+  dependencies:
+    mroads-js-utils "^1.0.0"
 
 react-native@0.61.5:
   version "0.61.5"
