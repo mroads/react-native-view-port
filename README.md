@@ -16,18 +16,15 @@ This package helps to create responsive application for either fully landscape o
 
 `$ npm install react-native-responsive-view-port --save`
 
-or
-
-`$ react-native link react-native-responsive-view-port`
 
 ## Usage
 
 ### Props   
-##### Props you may need to pass while implementing. This wrapper default extends the properties of the touchable Opacity.
+##### Function you need to call. This function by default returns the viewport values for screen size 1280 X 800.
 
 | Prop           |     Default     |   Type   | Description                                                                                                 |
 | :------------- | :-------------: | :------: | :---------------------------------------------------------------------------------------------------------- |
-| createViewPortConfig     |  () => {}  |  `function`  | Called when user clicked once.|
+| createViewPortConfig     |  () => {}  |  `function`  | Call to get viewport values.|
 
 ### Basic
 ```javascript
