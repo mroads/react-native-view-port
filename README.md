@@ -29,33 +29,150 @@ This package helps to create responsive application for either fully landscape o
 ### Basic
 ```javascript
 
-import { createViewPortConfig } from 'react-native-responsive-view-port';
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  TouchableHighlight,
+  Image,
+  Alert
+} from 'react-native';
+import {createViewPortConfig} from 'react-native-responsive-view-port';
 
-const baseDeviceWidth: 1920;
-const baseDeviceHeight: 1080;
-/*
-  createViewPortConfig returns default values for width: 1280px and height 800px
-  example: const { vw, vh } = createViewPortConfig();
-*/
-const { vw, vh } = createViewPortConfig(baseDeviceWidth, baseDeviceHeight); 
+const { vw, vh } = createViewPortConfig();
 
-function TextWrapper() {
-  return (
-    <View style={{ height: 500 * vh, width: 600 * vh, paddingVertical: 10 * vh, paddingHorizontal: 15 * vh }}>
-      <TextInput
-        style={{
-          height: 60 * vh,
-          marginLeft: 16 * vw,
-          borderBottomColor: '#FFFFFF',
-          flex:1,
-          justifyContent: 'center',
-          fontSize: 25 * vh,
-        }}
-	placeholder="Enter Text..."
-	keyboardType="email-address"
-	underlineColorAndroid='transparent'
-      />
-     </View>
-   );
- }
+const imageUrl = 'https://media.glassdoor.com/sql/958743/mroads-squarelogo-1458830826065.png';
+const userImage = 'https://img.icons8.com/pastel-glyph/2x/user-male.png';
+const emailImage = 'https://image.flaticon.com/icons/png/512/9/9923.png';
+const passwordImage = 'http://icons.iconarchive.com/icons/iconsmind/outline/512/Key-icon.png';
+
+export default class Register extends Component {
+
+  constructor(props) {
+    super(props);
+    state = {
+      fullName: '',
+      email   : '',
+      password: '',
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.viewCard}>
+	<View style={styles.imageContainer} ><Image style={styles.imageStyle} source={{uri: imageUrl }}/></View>
+	<View style={styles.inputContainer}>
+	  <Image style={styles.inputIcon} source={{uri: userImage }}/>
+	  <TextInput style={styles.inputs}
+	    placeholder="Full name"
+	    keyboardType="email-address"
+            underlineColorAndroid='transparent'
+	    onChangeText={(fullName) => this.setState({fullName})}
+	   />
+	</View>
+	<View style={styles.inputContainer}>
+	  <Image style={styles.inputIcon} source={{uri: emailImage }}/>
+	  <TextInput style={styles.inputs}
+	    placeholder="Email"
+	    keyboardType="email-address"
+	    underlineColorAndroid='transparent'
+	    onChangeText={(email) => this.setState({email})}
+	   />
+	</View>
+	<View style={styles.inputContainer}>
+	  <Image style={styles.inputIcon} source={{uri: passwordImage }}/>
+	  <TextInput style={styles.inputs}
+	    placeholder="Password"
+	    secureTextEntry={true}
+	    underlineColorAndroid='transparent'
+	    onChangeText={(password) => this.setState({password})}
+	  />
+	</View>
+	<TouchableHighlight style={[styles.buttonContainer, styles.signupButton]}>
+	  <Text style={styles.signUpText}>Sign up</Text>
+	</TouchableHighlight>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#545454',
+  },
+	viewCard: {
+		backgroundColor: '#d3d3d3',
+		justifyContent: 'center',
+		alignItems: 'center',
+		paddingVertical: 10 * vh,
+		paddingHorizontal: 15 * vw,
+		borderRadius: 8,
+		shadowOffset:{  width: 10 * vw,  height: 10 * vw },
+		shadowColor: 'black',
+		shadowOpacity: 1.0,
+		elevation: 10,
+		width: 500 * vw,
+	},
+  inputContainer: {
+      borderBottomColor: '#F5FCFF',
+      backgroundColor: '#FFFFFF',
+      borderBottomWidth: 1,
+      width: 450 * vw,
+      height: 60 * vh,
+      marginBottom: 20 * vh,
+      flexDirection: 'row',
+      alignItems:'center',
+      borderRadius: 8,
+  },
+  inputs:{
+      height: 60 * vh,
+      marginLeft: 16 * vw,
+      borderBottomColor: '#FFFFFF',
+      flex:1,
+      justifyContent: 'center',
+      fontSize: 25 * vh,
+  },
+  inputIcon:{
+    width: 45 * vw,
+    height: 45 * vw,
+    marginLeft: 10 * vw,
+    justifyContent: 'center',
+  },
+  imageContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#d3d3d3',
+    marginVertical: 10 * vh,
+  },
+  imageStyle: {
+    width: 130 * vw,
+    height: 130 * vw,
+    justifyContent: 'center',
+    borderRadius: 8,
+  },
+  buttonContainer: {
+    height: 60 * vh,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20 * vh,
+    width: 125 * vw,
+    borderRadius: 8,
+  },
+  signupButton: {
+    backgroundColor: 'green',
+  },
+  signUpText: {
+    color: 'white',
+    fontSize: 25 * vh,
+  }
+});
 ```
