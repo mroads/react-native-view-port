@@ -1,6 +1,10 @@
-# react-native-responsive-view-port
+# React Native Responsive View Port
 
-This package helps to create responsive application for either fully landscape or portrait applications.
+**react-native-view-port** is a light weight library that provides a function to make your React Native UI responsive. This package dosen't use any additional packages or libraries.
+
+It provides a solution to convert your existing React-native project to responsive. It supports for apps that are built only for single orientation.
+
+To save time in making or converting react-native project responsive try this.
 
 | 7-Inch Screen | 9-Inch Screen |
 | --- | --- |
@@ -15,10 +19,31 @@ This package helps to create responsive application for either fully landscape o
 
 `$ npm install react-native-responsive-view-port --save`
 
+or
+
+`$ yarn add react-native-responsive-view-port`
+
 
 ## Usage
 
-### Props   
+* When importing this package to the component, package gets the device's width and height. If we have a base device in mind that we build the app for we can pass their width and height for the future screens references. If we don't pass these values by default base device config will be *1280X800*. Based on these it calculates the device's view-ports to scale the UI for different devices.
+
+* The package provides a function createViewPortConfig. As mentioned above for this function we can pass width and height of the base device as a *number* value *I.e. createViewPortConfig(1920, 1080)* it returns an *object* with view-port height **vh** and view-port width **vw** for the base device size to current screen's width/height respectivelly. Below given example demonstrates how to use the function and the returned view-port values.
+
+* Main objectives of these package is to make the product responsive and to do it in a easy and effortless way. So the function returns an object with **vh** and **vw** which can be used similar to the view-ports that are used in web development.
+
+* To make your code responsive multiply the **vw** and **vh** values with the style elements.
+i.e. width: 200 * vw; height: 150 * vh; fontSize: 25 * vh.
+
+* The suggested approach is to import the package to a common exported component and pass the base device width and height and export the **vh** and **vw** values for **global use** in your project. Try the given example for better understanding.
+
+### Props
+```
+import {createViewPortConfig} from 'react-native-responsive-view-port';
+// If you don't pass base device width and height it calculates view-port for the following
+// default values default baseDevice width=1280 and height=800
+const { vw, vh } = createViewPortConfig();
+```
 ##### Function you need to call. This function by default returns the viewport values for screen size 1280 X 800.
 
 | Prop           |     Default     |   Type   | Description                                                                                                 |
