@@ -2,14 +2,13 @@
 
 This package helps to create responsive application for either fully landscape or portrait applications.
 
-## 7-Inch Screen
-![7-Inch](./example/assets/7-inch.png)
-## 9-Inch Screen
-![9-Inch](./example/assets/9-inch.png)
-## 10-Inch Screen
-![10-Inch](./example/assets/10-Inch.png)
-## 12-Inch Screen
-![12-Inch](./example/assets/12-inch.png)
+| 7-Inch Screen | 9-Inch Screen |
+| --- | --- |
+| <img src="./example/assets/7-inch.png" width="500" height="300"> | <img src="./example/assets/9-inch.png" width="500" height="300"> |
+
+| 10-Inch Screen | 12-Inch Screen |
+| --- | --- |
+| <img src="./example/assets/10-Inch.png" width="500" height="300"> | <img src="./example/assets/12-inch.png" width="500" height="300"> |
 
 # Setup
 ### Installation
