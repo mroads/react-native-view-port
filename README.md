@@ -1,8 +1,8 @@
 # React Native Responsive View Port
 
-**react-native-view-port** is a light weight library that provides a function to make your React Native UI responsive. This package dosen't use any additional packages or libraries.
+**react-native-view-port** is a light weight library that provides a functionality to make your React Native UI responsive. This is an independent package dosn't use any additional packages or libraries.
 
-It provides a solution to convert your existing React-native project to responsive. It supports for apps that are built only for single orientation.
+It provides a solution to convert your existing React-native project to make it responsive. It supports apps that are built only for single orientation.
 
 To save time in making or converting react-native project responsive try this.
 
@@ -26,9 +26,9 @@ or
 
 ## Usage
 
-* When importing this package to the component, package gets the device's width and height. If we have a base device in mind that we build the app for we can pass their width and height for the future screens references. If we don't pass these values by default base device config will be *1280X800*. Based on these it calculates the device's view-ports to scale the UI for different devices.
+* When importing this package to the component, package gets the device's width and height. If we have a base device in mind that we build the app for, We can pass their width and height for the future screens references. If we don't pass these values by default, Base device config will be *1280X800*. Based on these it calculates the device's view-ports to scale the UI for different devices.
 
-* The package provides a function createViewPortConfig. As mentioned above for this function we can pass width and height of the base device as a *number* value *I.e. createViewPortConfig(1920, 1080)* it returns an *object* with view-port height **vh** and view-port width **vw** for the base device size to current screen's width/height respectivelly. Below given example demonstrates how to use the function and the returned view-port values.
+* The package provides a function createViewPortConfig which takes width and height of the base device as a *number* value *I.e. createViewPortConfig(1920, 1080)* . It returns an *object* with view-port height **vh** and view-port width **vw** for corresponding base device size. Below given example demonstrates how to use the function and the returned view-port values.
 
 * Main objectives of these package is to make the product responsive and to do it in a easy and effortless way. So the function returns an object with **vh** and **vw** which can be used similar to the view-ports that are used in web development.
 
