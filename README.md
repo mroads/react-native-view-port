@@ -1,8 +1,8 @@
 # React Native Responsive View Port
 
-**react-native-view-port** is a light weight library that provides a functionality to make your React Native UI responsive. This is an independent package dosn't use any additional packages or libraries.
+**react-native-view-port** is a light weight library that provides a functionality to make your React Native UI responsive. This is an independent package and doesn't use any additional packages or libraries.
 
-It provides a solution to convert your existing React-native project to make it responsive. It supports apps that are built only for single orientation.
+It provides a solution to convert your existing React-native project to make it responsive and supports apps that are built only for single orientation.
 
 To save time in making or converting react-native project responsive try this.
 
